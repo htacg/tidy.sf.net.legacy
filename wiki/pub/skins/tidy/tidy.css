@@ -1,0 +1,203 @@
+  html, body { height: 100% }
+  body { background: white }
+
+  #nav
+  {
+    position: absolute;
+    width: 110px;
+    right: 10px;
+    top: 35px;
+
+    border-style: solid;
+    border-color: black;
+
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 0px;
+
+    background-color: white;
+    overflow: hidden;
+  }
+
+  #nav a {
+    letter-spacing: .05em;
+    padding: 2px;
+    padding-left: 1.5em; 
+    padding-right: 1.5em; 
+    text-decoration: none; 
+    font-size: 0.7em; 
+    display: block;
+    font-family: verdana, sans-serif;
+
+    border-width: 0;
+    border-style: dashed;
+    border-bottom-width: 1px;
+    font-weight: 900;
+
+    color: rgb(0,90,156);
+    background-color: white;
+    border-color: rgb(100,100,100);
+  }
+
+  #nav a:hover
+  {
+     color: rgb(00, 00, 96);
+     background-color: #eee;
+     border-color: black;
+  }
+
+  #nav br { display: none }
+
+#header {
+        position: relative;
+        top: 10px; 
+
+/*        font-family: Verdana, sans-serif;
+	font-size: 1.33em;
+	font-weight: 900;
+	line-height: .7;
+
+	color: rgb(0,90,156); 
+*/
+	margin: 0;
+	padding: 12px 0px 3px 15px;
+
+	height: 20px;
+
+	border-style:solid;
+	border-color:black;
+	border-width:1px 0px 1px 0px;
+
+	background-color: rgb(239, 239, 239);
+	
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	height:14px;
+	}
+
+body > #header { height:24px }
+
+body {
+	margin:0px;
+	padding:0px;
+}
+
+#mainheading {
+	margin:10px 0px 15px 0px;
+	padding:0px;
+	font-size:24px;
+	line-height:24px;
+	font-weight:900;
+	color:#bbb;
+	}
+
+#content > p { margin: 0px }
+#content > p + p { text-indent: 30px }
+#content {
+  margin: 0px 130px 50px 10px;
+  padding: 10px;
+}
+
+
+a img { border: none 0 }
+hr { display: none }
+#footer { border-top: black solid 1px }
+#footer address { font-style: normal }
+
+#footer {
+
+  font-family: Verdana, sans-serif;
+  font-size: 10px;
+  padding-left: 1.5em;
+
+
+} 
+
+#footer p { margin-bottom: .5em }
+
+a {
+	color:RGB(0,90,156); /* #09c replaced by the official color of W3C logo*/
+	/* font-size:11px; */ 
+	text-decoration:none;
+	font-weight:600;
+	}
+a:link {color:RGB(0,90,156);} /* #09c */
+a:visited {color:purple;} /* #07a */
+a:hover {background-color:#eee;}
+
+#footer img { float: right }
+#footer address { text-align: justify; margin-right: 100px }
+#footer { padding-right: 1em }
+
+
+      #mainheading { margin-top: 1em; font-family: verdana;  font-size: 1.5em;}
+      #content { font-family: Georgia; }
+      a:active {  }
+
+    #mainheading { font: 170% Arial, sans-serif }
+    #mainheading { background-color: rgb(  0,  79, 147); color: white; padding: .5em; padding-left: 1em;  }
+    #mainheading { border-bottom: 7px solid rgb(133, 176, 207); }
+    #mainheading { font-family: Verdana, sans-serif; font-weight: normal; font-size: 100% }
+    #mainheading { margin-top: 0 }
+    #mainheading { font: 1.7em Georgia, Garamond, Verdana, Arial, Helvetica, sans-serif }
+
+    html, body { margin-left: 0; margin-top: 0; padding-top: 0; padding-left: 0 }
+
+     #content { line-height: 170% }
+
+    h2 { font: 170% Arial, sans-serif }
+
+
+   #content { padding-top: 0ex }
+
+#content2 { margin: 0; padding: 0 }
+
+#content { margin-left: 160px }
+
+#content2 { background-color: rgb(226,218, 154); }
+#content { background-color: white }
+#left-nav { float: left; }
+#content { margin-right: 0; padding-right: 0 }
+
+#content h2 { margin-top: 0; padding-top: 1ex }
+
+#mainheading { margin-bottom: 0;  }
+
+#content { padding-right: 10%; padding-left: 2% }
+
+#content { border-left: 1px solid rgb(211,199,107) }
+
+#left-nav { margin-left: 5px }
+
+#floatbar { float: right; font-family: Verdana; font-size: smaller; padding-right: 5%;
+
+   border-bottom: 1px solid black;
+
+   padding-top: .3ex  }
+
+
+
+#left-nav *, #left-nav { font-size: 13px }
+#left-nav ul { list-style-type: none }
+
+
+      #left-nav { padding-left: 0; margin-left: 3px }
+      #left-nav ul { margin-left: 4px; }
+      #left-nav h1 { margin: 0; padding: 0 }
+      #left-nav ul { margin-top: 0 }
+
+
+      #left-nav { padding-top: 1ex }
+      #left-nav h1 { border-bottom: 1px solid black }
+
+      #left-nav a:link { color: black }
+      #left-nav a:visited { color: gray }
+
+
+      #floatbar a { color: black }
+      #floatbar a { font-weight: normal }
+
+
+      #left-nav a { font-weight: normal; font-size: 12px; font-family: Verdana, sans-serif }
+      #left-nav ul { padding: 0 }

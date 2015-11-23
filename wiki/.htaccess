@@ -1,0 +1,11 @@
+AuthName secret
+AuthType Basic
+AuthUserFile /home/groups/t/ti/tidy/.htpasswd
+require valid-user
+
+DirectoryIndex pmwiki.php
+
+# RewriteEngine on
+
+# RewriteRule ^wiki/([A-Z].*) /wiki/pmwiki.php?pagename=$1 [L,qsappend]
+# RewriteRule ^wiki/(pub|wikilib\.d|script|local)/ [L,F]
