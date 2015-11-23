@@ -1,131 +1,16 @@
 <html>
 <head>
-  <title>HTML Tidy Project Page</title>
-  <link rel="stylesheet" href="tidy.css" type="text/css">
+  <meta charset="UTF-8">
+  <link rel="canonical" href="https://github.com/htacg/tidy-html5/issues">
+  <meta http-equiv="refresh" content="4; url=https://github.com/htacg/tidy-html5/issues">
+  <title>Redirecting…</title>
 </head>
 <body>
-  <h1>Issues List for September, 2001 Release</h1>
-  <p>This document contains a list of outstanding issues that
-  need resolution before a final release.  The development
-  team is soliciting feedback and suggestions on these issues.
-  Please send your comments to html-tidy@w3.org. </p> 
-
-  <ol>
-  <li><b>UTF16 Character Encoding</b><br>
-    <p>Status: <b>Resolved</b></p>
-    <p>Should current UTF16 support be included in the current release?</p>
-    <p>Issues w/ inclusion were correct/complete functionality and appropriate
-    configuration interface.  Apparently, functionality issues such as surrogate handling,
-    default byte order, byte order detection and byte order mark output have been addressed. 
-    Also, the current command line interface is as an argument to the 
-    <code>--char-encoding</code>, <code>--input-encoding</code> and 
-    <code>--output-encoding</code> options, which was based on feedback.</p>
-  </li>
-  <li><b>Asian Character Encodings: ISO-1022, ShiftJIS and Big5</b><br>
-    <p>Status: <b>Open</b></p>
-    <p>Should current Asian character encoding support be included in 
-    the current release?</p>
-    <p>Currently Tidy does <i>not</i> transcode ISO-1022, Shift-JIS or Big5 encodings
-    into Unicode.  There appears to be consensus that, long term, it can and should.
-    That said, there are several, slightly different mapping tables between Unicode,
-    Shift-JIS and ISO-1022.  
-    See <a href="http://www.w3.org/TR/japanese-xml">http://www.w3.org/TR/japanese-xml</a> 
-    for details. </p>
-    <p>However, it may turn out to be a <i>good thing</i> that Tidy does <i>not</i>
-    transcode.  By keeping the text in the original encoding internally, Tidy
-    avoids any data loss due to encoding translation.</p>
-    <p>Another issue is that sample documents are needed for complete testing.  If you have
-    HTML documents in any of these encodings, and can share them with us, it would be
-    much appreciated.</p>
-  </li>
-  <li>
-    <b>Escaping &lt;script&gt; and &lt;style&gt; XHTML</b><br>
-
-    <p>Status: <b>Open</b></p>
-
-    <p>There are a number of problems / open issues surrounding
-    the escaping of &lt;script&gt; and &lt;style&gt; tags when
-    producing XHTML output.  For those just tuning in, the basic
-    issue is that browser scripts will often contain special XML
-    characters: <code>'&amp;'</code>, <code>'&lt;'</code>, 
-    <code>']]&gt;'</code> and <code>'&lt;' + '/' + Letter</code>.  
-    </p>
-
-    <p>If these are escaped to make XML processors
-    happy, it will break the script.  The agreed solution is to place
-    &lt;script&gt; source within a CDATA section.  This is now done
-    for both &lt;script&gt; and &lt;style&gt; tags.  So far, so good.
-    But there are a number open issues and possible unintended consequences.
-    </p>
-    <p>A primary source of the side-effects is that the CDATA begin and end
-    markers must be commented out in the source of the script or stylesheet.
-    In addition, script source is often embedded in HTML comments to prevent
-    parsing by older browsers that do not support Javascript.  Although these
-    browsers are exceedingly rare in the field these days, a large body of
-    HTML pages are coded using this technique.  Finally, embedding script
-    source in HTML comments is sometimes used - with IE only - as a way of 
-    hiding instances of <code>'&lt;' + / + Letter</code> from the browser.
-    </p>
-    
-    <ol type='a'>
-      <li>
-        <b>Is CDATA escaping necessary for &lt;style&gt; tags?</b><br>
-        <p>Currently, only CSS stylesheets are supported.  It has been
-        noted that the offending special characters rarely appear, if ever,
-        in CSS source. 
-        </p>
-      </li>
-      <li>
-        <b>How should <i>'&lt;' + '/' + Letter</i> appearing in script source be handled?</b><br>
-        <p>Currently, detection is <i>not</i> attempted, nor is any attempt made to hide 
-        such constructs.  This sequence marks the end of a CDATA section in SGML and, thus
-        is invalid HTML.  One option is to hide the script source within HTML comments
-        (within script comments, within the CDATA section).  Another is to emit an error
-        if such a sequence is detected.  The problem with emitting an error is that user
-        intervention is required.  The problem with HTML comments is that it only works
-        for IE and is complicated to implement correctly for multiple scripting languages
-        which leads us to ...
-        </p>
-      </li>
-      <li>
-        <b>What scripting languages should be supported?</b><br>
-        <p>It has been suggested that CDATA escaping support for all 
-        scripting languages besides Javascript be dropped to make 
-        hiding logic described above a tractable proposition.  Currently,
-        Javascript, JScript, ecmascript and VBScript are supported.  
-        Other candidates include perlscript and ruby.
-        </p>
-      </li>
-      <li>
-        <b>What XML processors should be supported?</b><br>
-        <p>The whole purpose of CDATA escaping is for XML compatibility.
-        It is not necessary for scripts to work with most current browsers.
-        </p>
-        <p>The most popular general purpose XML tool that might be applied to
-        XHTML pages is probably XSLT.  XSLT can treat certain element types
-        as CDATA sections.  But all instances of a type, &lt;script&gt; say, 
-        will be treated the same: CDATA or escaped.  So there is no benefit
-        to embedding some scripts CDATA sections but not others.
-        </p>
-        <p>But users may also write DOM and/or SAX based applications.  
-        Both of which may, optionally, preserve CDATA sections.  By default,
-        however, SAX will <i>not</i> preserve CDATA sections.
-        </p>
-        <p>The practical effect is whether all &lt;script&gt; tags should be CDATA
-        escaped or only those that absolutely require it.  The impact is primarily
-        on the code maintainer, who must either read through the messier code or be 
-        sure to re-Tidy the file and/or add CDATA sections by hand.
-        </p>
-      </li>
-    </ol>
-  </li>
-  <!--
-  <li>
-    <b></b><br>
-    <p>
-    </p>
-  </li>
-  -->
-  </ol>
+<h1>Redirecting…</h1>
+<p>
+  Link rot is bad, m’kay? We’ll get you to suitable content in a jiffy. If for
+  some reason your browser is a special snowflake that won’t honor meta 
+  redirects then head there yourself: <a href="https://github.com/htacg/tidy-html5/issues">https://github.com/htacg/tidy-html5/issues</a>
+</p>
 </body>
 </html>

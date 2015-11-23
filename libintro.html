@@ -6,6 +6,7 @@
   <title>Introduction To TidyLib</title>
   <meta http-equiv="Content-Type" content="text/xhtml; charset='us-ascii'" />
   <link rel="stylesheet" href="tidy.site.css" type="text/css" />
+  <meta charset="UTF-8">
   <style type="text/css">
   /*<![CDATA[*/
   table.info
@@ -39,6 +40,16 @@
 </head>
 
 <body>
+<div class="legacy">
+  <h1>Legacy Content Notice</h1>
+  <p>The content on this page is no longer under active maintenance,
+     however it remains here for historical interest as well as for
+     preventing link rot. Please see current content here:
+     <a href="http://www.html-tidy.org/developer/">http://www.html-tidy.org/developer/</a></p>
+  <p>Links have been updated and some editorial content had been injected, but
+     there is no guarantee of future changes to this page.</p>
+</div>
+
 <div class="content">
 <h1>What's all this about TidyLib?</h1>
 
@@ -93,11 +104,6 @@ to integrate into other software.</p>
          are provided for file and memory I/O.  But new sources and sinks
          may be provided via the public interface.</p>
   </dd>
-  <!--
-  <dt></dt>
-  <dd><p></p>
-  </dd>
-  -->
 </dl>
 
 <p>We had some prior art to follow as well.  Most notably, Marc-Andre
@@ -105,6 +111,13 @@ Lemburg's <a href="http://www.lemburg.com/files/python/mxTidy.html">mxTidy</a>.
   In the process of writing a Python wrapper for Tidy, Marc-Andre applied
 these principles and built a C library.  TidyLib can be seen as a completion
 of Marc's work.</p>
+
+<div class="legacy">
+  <p>This <strong>Getting Started</strong> content is obsolete. Please see
+     consult <a href="https://github.com/htacg/tidy-html5/tree/master/README">current
+     documentation in our source repository</a>, and then skip forward to
+     <a href="#example"><strong>Example</strong></a>.</p>
+</div>
 
 <h2 id="start">Getting Started</h2>
 
@@ -271,16 +284,27 @@ initialized at startup, no synchronization is necessary.</p>
 
 <h2 id="apidocs">API Docs</h2>
 
-<p>A first draft of <a href="http://tidy.sourceforge.net/docs/api/">API 
-Docs</a> have been added to Tidy header files and generated using 
-<a href="http://www.doxygen.org">Doxygen</a>. </p>
+<p>Several <a href="http://api.html-tidy.org/">API Docs</a> have been
+   added to Tidy header files and generated using 
+   <a href="http://www.stack.nl/~dimitri/doxygen/">Doxygen</a>.</p>
+
+<div class="legacy">
+  <p>This <strong>Nightly Build</strong> content is obsolete.</p>
+</div>
 
 <h2 id="nightlybuild">Nightly Build</h2>
 
 <p>The build procedures on the Source Forge
 Compile Farm have been updated to produce the command line driver
 based on the library sources.  See 
-<a href="http://tidy.sourceforge.net/#binaries">Tidy Binaries</a>.</p>
+<a href="http://binaries.html-tidy.org">Tidy Binaries</a>.</p>
+
+<div class="legacy">
+  <p>This <strong>Future Directions</strong> content is obsolete. Please
+     consult our
+     <a href="https://github.com/htacg/community/blob/master/roadmap.md">roadmap</a>
+     in our Community repository.</p>
+</div>
 
 <h2 id="future">Future Directions</h2>
 
@@ -306,7 +330,7 @@ list.</p>
          all alternate transcriptions for Big5 and others.  For more
          info, see <a
 href="http://search.cpan.org/src/COOPERCL/XML-Encoding-1.01/maps/">CPAN</a>
-         and <a href="issues.list.html">Tidy Issues</a>.</p>
+         and <a href="https://github.com/htacg/tidy-html5/issues">Tidy Issues</a>.</p>
   </dd>
   <dt>Error Handling</dt>
   <dd>
@@ -329,7 +353,10 @@ href="http://search.cpan.org/src/COOPERCL/XML-Encoding-1.01/maps/">CPAN</a>
   </dd>
 </dl>
 
-<p><em>Page last updated on 26 November, 2002 by C. Reitzel</em></p>
+<p>
+   <em>Editorial changes on 23 November 2015 by J. Derry</em><br/>
+   <em>Page last updated on 26 November 2002 by C. Reitzel</em>
+</p>
 
 </div>
 </body>

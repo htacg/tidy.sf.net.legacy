@@ -1,13 +1,6 @@
-
 <IfModule mod_rewrite.c>
 RewriteEngine on
 
-# changed status...
-#RewriteRule bug/968604 http://tidy.sourceforge.net/feature/968604 [R,L]
-
-#RewriteRule issue/(.+) https://sourceforge.net/tracker/index.php?func=detail&aid=$1&group_id=27659&atid=390963 [L,R=302]
-#RewriteRule bug/(.+) https://sourceforge.net/tracker/index.php?func=detail&aid=$1&group_id=27659&atid=390963 [L,R=302]
-#RewriteRule feature/(.+) https://sourceforge.net/tracker/index.php?func=detail&aid=$1&group_id=27659&atid=390966 [L,R=302]
 
 RewriteRule (feature|bug|issue)/(.+) https://sourceforge.net/support/tracker.php?aid=$2 [L,R=302]
 

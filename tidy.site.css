@@ -320,3 +320,23 @@ font-size: 10pt;
 color: #333366;
 font-weight: normal
 }
+
+ul.list_of_links
+{
+list-style-type: none;
+line-height: 175%;
+padding-left: 0;
+}
+
+div.legacy
+{
+background-color: khaki;
+padding: 0.5em 1em;
+width: 60%;
+margin: auto;
+}
+
+div.legacy h1
+{
+text-align: center;
+}
