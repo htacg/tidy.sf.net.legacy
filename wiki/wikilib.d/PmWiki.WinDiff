@@ -1,9 +1,0 @@
-version=pmwiki-0.6.9
-newline=²
-text=PmWiki uses the external programs ''diff'' and ''patch'' to store and restore previous versions of pages.  While these programs are commonly available on most Unix systems, they are generally not available under Windows.²²WinDiff (http://www.pmichaud.com/pub/windiff/windiff.zip) is a special package containing Windows versions of the  ''diff'' and ''patch'' programs from the [[http://www.sourceforge.net/projects/gnuwin32 Gnuwin32 project]].  To use this package, simply create a ''windiff/'' subdirectory in the directory that holds your ''pmwiki.php'' script and copy the files from the [[http://www.pmichaud.com/pub/windiff/windiff.zip zip archive]] into that directory.  Then, add the following lines to your ''local/config.php'' file:²²    $SysDiffCmd = 'windiff\\diff';²    $SysPatchCmd = 'windiff\\patch --silent';²²    ²That should be all there is to it!  Questions and comments can be sent to mailto:pmwiki-users@pmichaud.com.²²----²²Those with [=MSys=] already installed may find the following config lines helpful:²²    $SysDiffCmd = 'C:/msys/1.0/bin/diff.exe';²    $SysPatchCmd = 'C:/msys/1.0/bin/patch.exe';²²²
-time=1079512152
-author=Pm
-name=PmWiki.WinDiff
-host=24.1.44.14
-agent=Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)
-rev=3

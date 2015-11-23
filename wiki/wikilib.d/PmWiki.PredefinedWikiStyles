@@ -1,9 +1,0 @@
-version=pmwiki-0.6.18
-newline=²
-text=!!Predefined WikiStyles²²This page will evenutally document the predefined WikiStyles that are²available in a standard installation of PmWiki.²²* @@[=%comment%=]''comment...''[=%%=]@@²²²!!! The {{WikiStyle|s}} @@comment@@²²The style @@[=%comment%=]''comment...''[=%%=]@@ can be used to embed comments that are not shown. For a multiline comment, write something like this: ²²  [=%comment%=] [=[=²    This is a longer block²    of text that has been commented out²    by the %comment% markup. =]=]²²	  ''List the standard predefined WikiStyles here''²²²!!!Predefining additional WikiStyles²²The administrator can permanently define additional styles by adding entries to the array called $WikiStyle. For example, in order to permanently add a @@[=%U%=]@@ as new {{WikiStyle|s}} that underlines, add this code to @@local/config.php@@:²²	$WikiStyle['U']['text-decoration'] = 'underline';²²²²²
-time=1084140090
-author=Pm
-name=PmWiki.PredefinedWikiStyles
-host=24.1.44.14
-agent=Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.6) Gecko/20040206 Firefox/0.8
-rev=4

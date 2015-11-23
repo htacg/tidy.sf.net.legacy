@@ -162,7 +162,7 @@ font-size: 10pt;
 color: #336699;
 background-color: #e9e9d3;
 /* text-decoration: none; */
-font-weight: bold
+font-weight: bold;
 }
 
 /* TABLE CELL */
@@ -324,8 +324,10 @@ font-weight: normal
 ul.list_of_links
 {
 list-style-type: none;
-line-height: 175%;
-padding-left: 0;
+line-height: 150%;
+margin: 0;
+padding: 0;
+padding-left: 0.5em;
 }
 
 div.legacy
