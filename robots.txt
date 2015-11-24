@@ -1,3 +1,0 @@
-# Do not index PmWiki documentation
-User-Agent: *
-Disallow: /wiki/PmWiki/

@@ -165,6 +165,12 @@ background-color: #e9e9d3;
 font-weight: bold;
 }
 
+table { border-collapse: collapse; }
+tr.tabletitle
+{
+border-top: 1em solid white;
+}
+
 /* TABLE CELL */
 TD.cell, TR.cell, FONT.cell, .cell, A:link.cell, A:visited.cell, A:active.cell
 {  

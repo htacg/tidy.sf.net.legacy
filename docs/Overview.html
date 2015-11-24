@@ -8,6 +8,22 @@
 content="HTML, validation, error correction, pretty-printing" />
 <meta name="author" content="Dave Raggett &lt;dsr@w3.org&gt;" />
 <style type="text/css">
+div.legacy
+{
+background-color: khaki;
+padding: 0.5em 1em;
+width: 60%;
+margin: auto;
+}
+
+div.legacy h1
+{
+text-align: center;
+margin: 0;
+font-size: 1.2em;
+}
+</style>
+<style type="text/css">
   body { 
     margin-left: 10%; 
     margin-right: 10%; 
@@ -61,7 +77,20 @@ content="HTML, validation, error correction, pretty-printing" />
 </head>
 <body bgcolor="#FFFFFF" background="grid.gif" text="black"
 link="navy" vlink="black" alink="red">
-<h1 class="c1"><img src="tidy.gif" width="32" height="32"
+
+<div class="legacy">
+  <h1>Legacy Content Notice</h1>
+  <p>The content on this page is no longer under active maintenance,
+     however it remains here for historical interest as well as for
+     preventing link rot. Please see current content here:
+     <a href="http://www.html-tidy.org/developer/">http://www.html-tidy.org/developer/</a></p>
+  <p>Links have been updated and some editorial content had been injected, but
+     there is no guarantee of future changes to this page.</p>
+</div>
+
+
+
+<h1 class="c1"><img src="../images/tidy.gif" width="32" height="32"
 align="top" alt="icon" /> Clean up your Web pages<br />
  with HTML TIDY</h1>
 
@@ -77,9 +106,8 @@ support during the development of this software!</blockquote>
 
 <hr width="80%" class="c4" />
 <p class="c3"><a href="#help">How to use Tidy</a> | <a
-href="#download">Downloading Tidy</a> | <a
-href="release-notes.html">Release Notes</a><br />
- <a href="#quotes">Integration with other Software</a> | <a
+href="#download">Downloading Tidy</a> | 
+<a href="#quotes">Integration with other Software</a> | <a
 href="#acks">Acknowledgements</a></p>
 
 <hr width="80%" class="c4" />
@@ -102,9 +130,7 @@ subscribe in the subject line (include the word unsubscribe if
 you want to unsubscribe). The <a
 href="http://lists.w3.org/Archives/Public/html-tidy/">archive</a>
 for this list is accessible online. Please use this list to
-report errors or enhancement requests. See the <a
-href="release-notes.html" class="c6">release notes</a> for
-information on recent changes. Your feedback is welcome!</p>
+report errors or enhancement requests. Your feedback is welcome!</p>
 
 <p>If you find HTML Tidy useful and you would like to say thanks,
 then please send me a (paper) postcard or other souvenir from the
@@ -149,10 +175,6 @@ can see where the problem lies in your markup. Tidy won't
 generate a cleaned up version when there are problems that it
 can't be sure of how to handle. These are logged as "errors"
 rather than "warnings".</p>
-
-<p class="c7">Tidy features in a <a
-href="http://webreview.com/wr/pub/1999/07/16/feature/index.html">recent
-article on XHTML</a> by webreview.com.</p>
 
 <!-- is the final "index.html" needed or appropriate? -->
 <h3>Examples of TIDY at work</h3>
@@ -653,7 +675,7 @@ errs.txt -imu foo.html</p>
 
 <p>Matej Vela &lt;<a
 href="mailto:vela@debian.org">vela@debian.org</a>&gt; has written
-a <a href="man_page.txt">Unix man page for Tidy</a>, but for the
+a <a href="tidy_man.html">Unix man page for Tidy</a>, but for the
 latest details on config options and for the release notes please
 visit this page: <a
 href="http://www.w3.org/People/Raggett/tidy">http://www.w3.org/People/Raggett/tidy</a>.</p>
@@ -1074,9 +1096,7 @@ the input includes previously unknown tags.</dd>
 space or comma separated list of tag names. Unless you declare
 new tags, Tidy will refuse to generate a tidied file if the input
 includes previously unknown tags. Note you can't change the
-content model for elements such as table, ul, ol and dl. This is
-explained in more detail in the <a
-href="release-notes.html">release notes</a>.</dd>
+content model for elements such as table, ul, ol and dl.</dd>
 
 <dt>new-pre-tags: <em>tag1, tag2, tag3</em></dt>
 
